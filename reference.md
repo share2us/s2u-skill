@@ -17,6 +17,9 @@ Binary: `s2u` (alias `share2us`). `s2u help` prints this; `s2u version` prints t
 | `s2u revoke <serial\|id>\|--all [--yes]` / `revoke-all` | Kill a link (or all). |
 | `s2u pause\|resume <serial\|id>` | Temporarily disable / re-enable a share. |
 | `s2u rm\|delete <serial\|id>... [--yes]` | Delete shares. |
+| `s2u <file>.mdx` | Share an `.mdx` as a fillable interactive form. |
+| `s2u forms responses <formId>` | List who submitted a form and when. |
+| `s2u forms response <formId> <responseId>` | Decrypt and print one response. |
 | `s2u login [--host URL] [--no-browser] [--no-input]` | Authenticate. |
 | `s2u whoami` / `s2u logout` | Show identity / sign out this device. |
 | `s2u devices` / `s2u signout <device>` | List / sign out a device. |
