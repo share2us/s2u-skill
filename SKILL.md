@@ -121,6 +121,20 @@ s2u revoke <serial|id>       # kill one link   (revoke --all for everything)
 s2u rm <serial|id> --yes     # delete
 ```
 
+**Interactive forms** (share an `.mdx` as a fillable form, like Google Forms)
+
+```bash
+s2u survey.mdx                               # share -> fillable form at the link
+s2u forms responses <formId>                 # list who submitted and when
+s2u forms response <formId> <responseId>     # decrypt + print one response
+```
+
+The `.mdx` must contain only `<Form>`, `<Question id="..." type="...">`, and
+`<Choice>` tags (question text is Markdown); types are `short`, `long`, `choice`,
+`multi`, `email`, `number`, `date`. A malformed file is rejected with a message
+that states the expected shape. Responses are end-to-end encrypted to the owner:
+only `s2u forms response` (or the portal) can decrypt them.
+
 ## Notes
 
 - **End-to-end:** the key is in the URL fragment (`#k=`), so the full link is
